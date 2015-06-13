@@ -58,13 +58,14 @@ plot(summ_byint$interval,summ_byint$Avg.steps,
 ```
 
 ![plot of chunk averageperday](figure/averageperday-1.png) 
+Finding the interval with max steps
 
 ```r
-max(summ_byint$Avg.steps)
+summ_byint$interval[which.max(summ_byint$Avg.steps)]
 ```
 
 ```
-## [1] 206.1698
+## [1] 835
 ```
 
 ###Imputing missing values
@@ -82,6 +83,8 @@ table(data_na)[2]
 ```
 
 Filling in missing values
+The NAs are filled in with the mean number of steps at that interval over all
+the days.
 
 ```r
 data_df$steps <- as.numeric(data_df$steps)
