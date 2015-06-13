@@ -4,7 +4,7 @@
 
 ### Setting Defaults
 ```{r global_options}
-knitr::opts_chunk$set(fig.path='Figs/',
+knitr::opts_chunk$set(fig.path='figure/',
                       warning=FALSE, message=FALSE)
 ```
 
